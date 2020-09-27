@@ -1,0 +1,104 @@
+{
+	"title" : {
+		"prefix": "title",
+		"body": [
+			"#! /usr/bin/python",
+			"\"\"\"",
+			"\t@Author_name : Arsham mohammadi nesyshabori",
+			"\t@Author_email : arshammoh1998@gmail.com",
+			"\t@Author_nickname : apep",
+			"\t@date : ",
+			"\t@version : ",
+			"\"\"\"",
+			"$0"
+		]
+	},
+
+	"printlist" : {
+		"prefix": "debug list",
+		"body": [
+			"# DEBUG ",
+			"for INDEX in range(len($1)):",
+			"\tprint(\"item {} = {}\".format(INDEX, $1[INdEX]))",
+			"$0"
+		]
+	},
+
+	"printDict" : {
+		"prefix": "debug dict",
+		"body": [
+			"# DEBUG ",
+			"for KEY, VALUE in $1.items():",
+			"\tprint(\"{} = {}\".format(KEY, VALUE))",
+			"$0"
+		]
+	},
+
+	"function" : {
+		"prefix": "function",
+		"body": [
+			"def $1($2, $3):",
+			"\t\"\"\"",
+			"\t\t $4",
+			"\t\t :param $2: $2",
+			"\t\t :param $3: $3",
+			"\t\"\"\"",
+			"\tpass",
+			"$0"
+		]
+	},
+
+	"toDo" : {
+		"prefix": "to do",
+		"body": [
+			"\"\"\" #TODO",
+			"\t$1",
+			"\"\"\"",
+			"$0"
+		]
+	},
+
+	"webscrap" : {
+		"prefix": "web scrap",
+		"body": [
+			"# start web scraping import",
+			"from bs4 import BeautifulSoup",
+			"import requests",
+			"import json",
+			"import time",
+			"import random",
+			"import re",
+			"# end web scraping import",
+			"",
+			"",
+			"$0"
+		]
+	},
+
+	"telegrambot" : {
+		"prefix": "telegram",
+		"body": [
+			"# start telegram bot import",
+			"from telepot.loop import MessageLoop",
+			"import telepot",
+			"import time",
+			"# end telegram bot import",
+			"",
+			"",
+			"bot = telepot.Bot(\"$1\")",
+			"",
+			"def chat_message_handel(message):",
+			"\tpass",
+			"",
+			"def button_message_handel(message):",
+			"\tpass",
+			"",
+			"MessageLoop(bot,{'chat': chat_message_handel,",
+			"\t\t\t\t 'callback_query': button_message_handel}).run_as_thread()",
+			"",
+			"while True:",
+		  	"\ttime.sleep(10)",
+			"$0"
+		]
+	}
+}
